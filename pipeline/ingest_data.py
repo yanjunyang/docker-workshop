@@ -81,18 +81,8 @@ def ingest_data(
 @click.option('--year', default=2021, type=int, help='Year of the data')
 @click.option('--month', default=1, type=int, help='Month of the data')
 @click.option('--chunksize', default=100000, type=int, help='Chunk size for ingestion')
-@click.option('--target-table', default='yellow_taxi_data', help='Target table name')
+@click.option('--target-table', default='yellow_taxi_data1', help='Target table name')
 def main(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, chunksize, target_table):
-    pg_user = 'root'
-    pg_pass = 'root'
-    pg_host = 'localhost'
-    pg_port = '5432'
-    pg_db = 'ny_taxi'
-    year = 2021
-    month = 1
-    chunksize = 100000
-    target_table = 'yellow_taxi_data'
-
     engine = create_engine(f'postgresql://{pg_user}:{pg_pass}@{pg_host}:{pg_port}/{pg_db}')
     url_prefix = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow'
 
