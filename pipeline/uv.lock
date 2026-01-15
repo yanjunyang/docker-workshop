@@ -1156,6 +1156,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "click" },
     { name = "jupyter" },
     { name = "pgcli" },
 ]
@@ -1172,6 +1173,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "click", specifier = ">=8.1.7" },
     { name = "jupyter", specifier = ">=1.1.1" },
     { name = "pgcli", specifier = ">=4.4.0" },
 ]
