@@ -1,5 +1,7 @@
 *.parquet
 test/
+**/.env_encoded
+.env_encoded
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
