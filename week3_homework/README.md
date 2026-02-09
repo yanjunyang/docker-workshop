@@ -29,3 +29,12 @@ CREATE TABLE `dtc-de-course-484501.week3_homework.yellow_tripdata_partitioned`
 PARTITION BY DATE(tpep_dropoff_datetime)
 CLUSTER BY VendorID
 AS SELECT * FROM `dtc-de-course-484501.week3_homework.yellow_tripdata`;
+
+-- Q6
+SELECT DISTINCT(VendorID)
+FROM `dtc-de-course-484501.week3_homework.yellow_tripdata`
+WHERE DATE(tpep_dropoff_datetime) BETWEEN '2024-03-01' AND '2024-03-15';
+
+SELECT DISTINCT(VendorID)
+FROM `dtc-de-course-484501.week3_homework.yellow_tripdata_partitioned`
+WHERE DATE(tpep_dropoff_datetime) BETWEEN '2024-03-01' AND '2024-03-15';
