@@ -1,4 +1,5 @@
 *.parquet
+*.csv
 test/
 **/.env_encoded
 .env_encoded
